@@ -46,7 +46,7 @@ function imdb250(selection){
                 img.id = "img" + i + selection;
                 crw.id = "crew" + i + selection;
                 rtng.id = "rating" + i + selection;
-                watchedCb.id = "watched" + i + selection;
+                watchedCb.id = "watched" + i + selection + data.items[i].id;
 
                 container.appendChild(cnt.cloneNode(true));
 
@@ -55,7 +55,7 @@ function imdb250(selection){
                 let clickableCrew = document.getElementById("crew" + i + selection);
                 let clickableRating = document.getElementById("rating" + i + selection);
 
-                let watchedCBToggle = document.getElementById("watched" + i + selection);
+                let watchedCBToggle = document.getElementById("watched" + i + selection + data.items[i].id);
 
                 if(localStorage.getItem(watchedCBToggle.id) != null){
                     if(localStorage.getItem(watchedCBToggle.id) == "true"){
