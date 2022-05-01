@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="/script.js"></script>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="icon" href="http://icons.iconarchive.com/icons/uiconstock/socialmedia/512/IMDb-icon.png" type="image/icon type"></link>
+    <title>IMDb Top 250 Movies</title>
+</head>
+<body>
+    <div class="mainContainer">
+        <div class="titleContainer">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/IMDB_Logo_2016.svg/575px-IMDB_Logo_2016.svg.png" alt="" class="titleImg">
+            <h1 class="mainTitle" id="mainTitle">Top 250 Movies</h1>
+        </div>
+        <div class="selectionContainer">
+            <p class="selection" id="movies" style="font-weight: bold;">Movies</p>
+            <p> / </p>
+            <p class="selection" id="shows">Shows</p>
+        </div>
+        <div class="watchedFilter">
+            <div>
+                <input type="radio" name="watchedFilter" value="All" id="all">
+                <label for="all">All</label>
+            </div>
+            <div>
+                <input type="radio" name="watchedFilter" value="Watched" id="watched">
+                <label for="watched">Watched</label>
+            </div>
+            <div>
+                <input type="radio" name="watchedFilter" value="NotWatched" id="notWatched">
+                <label for="notWatched">Not watched</label>
+            </div>
+        </div>
+        <div class="search-wrapper">
+            <label for="search" id="searchLabel">Search Movies</label>
+            <input type="search" id="search" class="search" data-search>
+        </div>
+        <div id="container"></div>
+
+    </div>
+    <template id="temp1">
+        <div class="temp1">
+            <label class="label"> 
+                <input type="checkbox" name="checkbox" id="watched" value="text"> Watched
+              </label>
+            <h3 id="title" class="title" data-title></h3>
+            <div id="imageContainer" class="poster">
+                <img id="img" class="img"></img>
+            </div>
+            <p id="rating" class="rating"></p>
+            <p id="crew" class="crew"></p>
+        </div>
+    </template>
+</body>
+</html>
