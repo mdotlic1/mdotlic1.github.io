@@ -178,6 +178,7 @@ searchInput.addEventListener("input", e => {
         titles.forEach(title => {
             if(title.parentNode.classList.contains("watched")){
                 title.parentNode.classList.remove("hideWatched")
+                title.parentNode.classList.remove("hide")
             } else {
                 title.parentNode.classList.add("hideWatched")
             }
@@ -191,6 +192,7 @@ searchInput.addEventListener("input", e => {
         titles.forEach(title => {
             if(!title.parentNode.classList.contains("watched")){
                 title.parentNode.classList.remove("hideWatched")
+                title.parentNode.classList.remove("hide")
             } else {
                 title.parentNode.classList.add("hideWatched")
             }
