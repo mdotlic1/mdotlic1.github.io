@@ -6,11 +6,12 @@ let searchLabel = document.getElementById("searchLabel");
 let all = document.getElementById("all");
 let watched = document.getElementById("watched");
 let notWatched = document.getElementById("notWatched");
+let counter = document.getElementById("counter");
+
+let count = 0;
 
 const apiKey = 'k_8v1ctp8r';
-
 all.checked = true;
-
 
 let title = cnt.getElementById("title");
 let img = cnt.getElementById("img");
@@ -163,6 +164,7 @@ searchInput.addEventListener("input", e => {
   })
 
     all.addEventListener("click", () => {
+        counter.style.display = "none";
         searchInput.value = '';
         let titles = document.querySelectorAll("[data-title]"); 
         titles.forEach(title => {
@@ -173,29 +175,37 @@ searchInput.addEventListener("input", e => {
     });
 
     watched.addEventListener("click", () => {
+        count = 0;
+        counter.style.display = "initial";
         searchInput.value = '';
         let titles = document.querySelectorAll("[data-title]"); 
         titles.forEach(title => {
             if(title.parentNode.classList.contains("watched")){
                 title.parentNode.classList.remove("hideWatched")
                 title.parentNode.classList.remove("hide")
+                count++;
             } else {
                 title.parentNode.classList.add("hideWatched")
             }
         });
         localStorage.setItem("watchedFilter", "watched");
+        counter.innerHTML = "Watched: " + count;
     });
 
     notWatched.addEventListener("click", () => {
+        count = 0;
+        counter.style.display = "initial";
         searchInput.value = '';
         let titles = document.querySelectorAll("[data-title]"); 
         titles.forEach(title => {
             if(!title.parentNode.classList.contains("watched")){
                 title.parentNode.classList.remove("hideWatched")
                 title.parentNode.classList.remove("hide")
+                count++;
             } else {
                 title.parentNode.classList.add("hideWatched")
             }
         });
         localStorage.setItem("watchedFilter", "notWatched");
+        counter.innerHTML = "Not Watched: " + count;
     });
