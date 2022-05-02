@@ -6,6 +6,10 @@ html {
     scroll-behavior: smooth;
   }
 
+  h1{
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+
 body{
     margin:0;
     position:relative;
@@ -23,7 +27,7 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    
+    display: none;
 }
 
 #container {
@@ -143,7 +147,7 @@ p{
     display: flex;
     flex-direction: column;
     gap: .25rem;
-    width: 30%;
+    width: 250px;
     text-align: center;
     margin-top: 20px;
     margin-bottom: 0px;
@@ -156,6 +160,11 @@ p{
 
 .search{
     text-align: right;
+    height: 35px;
+    border-radius: 10px;
+    border: 1px solid #cccccc;
+    padding: 10px;
+    font-size: 20px;
 }
 
 .rating{
@@ -176,4 +185,62 @@ p{
 
 .counter{
     margin: 10px;
+}
+
+.warningMessage{
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+button{
+    display: inline-block;
+        background-color: #f6c800;
+        border-radius: 10px;
+        border: 4px double #cccccc;
+        color: #000000;
+        text-align: center;
+        font-size: 28px;
+        font-weight: 500;
+        padding: 20px;
+        width: 150px;
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: 5px;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;     
+}
+
+.keyEntry{
+    width:100%;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#keyInput{
+    width: 250px;
+    height: 25px;
+    border-radius: 10px;
+    border: 1px solid #cccccc;
+    padding: 10px;
+    font-size: 20px;
+    margin: 100px 0px 100px 0px;
+}
+
+#keyButton{
+    font-size: 52px;
+    font-weight: 500;
+    font-stretch: narrower;
+}    
+
+a:visited {
+    color: #ffffff;
+}
+
+.info{
+    font-size: 20px;
 }
