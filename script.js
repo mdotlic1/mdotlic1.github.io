@@ -10,7 +10,6 @@ let counter = document.getElementById("counter");
 
 let count = 0;
 
-const apiKey = 'k_8v1ctp8r';
 all.checked = true;
 
 let title = cnt.getElementById("title");
@@ -125,6 +124,22 @@ function imdb250(selection){
                     notWatched.click()
                 }
             }
+
+            if(container.innerHTML == ''){
+                localStorage.removeItem("apiKey");
+                let warningMessage = document.createElement("h1");
+                warningMessage.classList.add("warningMessage");
+                warningMessage.innerHTML = "Please try a different API key.";
+                mainContainer.appendChild(warningMessage);
+                let refresh = document.createElement("button");
+                refresh.classList.add("refresh");
+                refresh.innerHTML = "Try different API key";
+                mainContainer.appendChild(refresh);
+                refresh.addEventListener("click", ()=>{
+                    location.reload();
+                });
+            }
+                
             
         }
     }
