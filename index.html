@@ -4,13 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script defer src="/script.js"></script>
+    <script defer src="/loadingScript.js"></script>
     <link rel="stylesheet" href="/styles.css">
     <link rel="icon" href="http://icons.iconarchive.com/icons/uiconstock/socialmedia/512/IMDb-icon.png" type="image/icon type"></link>
     <title>IMDb Top 250 Movies</title>
 </head>
 <body>
-    <div class="mainContainer">
+    <div class="keyEntry" id="keyEntry">
+        <div class="titleContainer">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/IMDB_Logo_2016.svg/575px-IMDB_Logo_2016.svg.png" alt="" class="titleImg">
+            <h1 class="mainTitle" id="mainTitle">Top 250</h1>
+        </div>
+        <div class="keyInput">
+            <input type="text" id="keyInput" placeholder="Enter an API key">
+            <button id="keyButton" onclick="enter()">Enter</button>
+        </div>
+        <div class="info">
+            <p>Enter an API key to view the top 250 movies/shows on IMDb.</p>
+            <p>If you don't have an API key, you can get one <a href="https://imdb-api.com/API" target="_blank">here</a>.</p>
+        </div>
+    </div>
+    <div class="mainContainer" id="mainContainer">
         <div class="titleContainer">
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/IMDB_Logo_2016.svg/575px-IMDB_Logo_2016.svg.png" alt="" class="titleImg">
             <h1 class="mainTitle" id="mainTitle">Top 250 Movies</h1>
@@ -36,7 +50,7 @@
         </div>
         <div class="search-wrapper">
             <label for="search" id="searchLabel">Search Movies</label>
-            <input type="search" id="search" class="search" data-search>
+            <input type="search" id="search" class="search" data-search placeholder="Search...">
         </div>
         <p id="counter" class="counter"></p>
         <div id="container"></div>
