@@ -311,3 +311,11 @@ a:visited {
     }
     
 }
+
+@media (prefers-color-scheme: dark) {
+    .temp1
+    {
+        background: #101010;
+        color: #ffffff;
+    }
+  }
