@@ -119,19 +119,6 @@ p{
     padding: 5px;
 }
 
-.visibleCrew{
-    width: 250px;
-    height: auto;
-    background: white;
-    position:absolute;
-    font-size: 12px;
-    top:250px;
-    left:125px;
-    z-index: 100;
-    display: none;
-    border-radius: 10px;
-    border: 1px solid black;
-}
 
 .label{
     font-size:10px;
@@ -243,4 +230,74 @@ a:visited {
 
 .info{
     font-size: 20px;
+}
+
+@media (max-width: 400px) {
+    .temp1{
+        grid-template-rows: auto 1fr auto 20px 0.6fr;
+    }
+
+    .titleContainer{
+        padding: 5px;
+    }
+
+    .mainTitle{
+        font-size: 1.5rem;
+        padding-left: 10px;
+    }
+
+    .selectionContainer{
+        padding: 5px;
+        font-size: 1rem;
+    }
+
+    .selection{
+        font-size: 1rem;
+    }
+
+    .poster{
+        display: flex;
+        justify-content: center;
+    }
+
+    .img{
+        height: 100px;
+    }
+
+    p{
+        text-align: center;
+        margin: 10px;
+        padding-top: 2px;
+        font-weight: 600;
+    }
+
+    .titleImg{
+        width:100px;
+        height:60px;
+        padding: 5px;
+    }
+
+    #keyInput{
+        width: 150px;
+        height: 25px;
+        border-radius: 10px;
+        border: 1px solid #cccccc;
+        padding: 10px;
+        font-size: 20px;
+        margin: 100px 0px 100px 0px;
+    }
+
+    #keyButton{
+        font-size: 28px;
+        font-weight: 500;
+        font-stretch: narrower;
+    }
+
+    button{
+        font-size: 20px;
+        font-weight: 500;
+        font-stretch: narrower;
+        width: 100px;
+    }
+    
 }
