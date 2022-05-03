@@ -232,7 +232,7 @@ a:visited {
     font-size: 20px;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 450px) {
     .temp1{
         grid-template-rows: auto 1fr auto 20px 0.6fr;
     }
